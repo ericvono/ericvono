@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eric Vono — Official Site</title>
+  <meta name="description" content="The official home base for Eric Vono — Relax Bro podcast, motorsports & fabrication, media, and more." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navwrap">
+      <a class="brand" href="#home">
+        <img src="assets/logo.svg" alt="Eric Vono logo" class="brand-logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="site-nav">
+        <a href="#home">Home</a>
+        <a href="#podcast">Relax Bro</a>
+        <a href="#work">Builds</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container">
+        <h1>ericvono<span class="dot">.com</span></h1>
+        <p class="tagline">Home base for everything: <strong>Relax Bro</strong>, motorsports, welding & fabrication, and media.</p>
+        <div class="cta-row">
+          <a href="#podcast" class="btn primary">Listen to the Podcast</a>
+          <a href="#work" class="btn">See the Work</a>
+        </div>
+      </div>
+      <div class="hero-metal"></div>
+    </section>
+
+    <section id="podcast" class="section">
+      <div class="container">
+        <h2>Relax Bro — Latest Episode</h2>
+        <p>Stories, therapy-style conversations, and real talk. New episodes drop regularly.</p>
+        <!-- Replace this embed src with your Apple Podcasts or Spotify embed -->
+        <div class="player-card">
+          <iframe src="https://open.spotify.com/embed/show/0Hq0h0x0x0x0x0x0x0" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="subscribe-row">
+          <a class="pill" href="#" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a class="pill" href="#" target="_blank" rel="noopener">Spotify</a>
+          <a class="pill" href="#" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section alt">
+      <div class="container">
+        <h2>Builds & Fabrication</h2>
+        <p>From <strong>Goliath</strong> to custom race vehicles — precision metalwork, suspension magic, and clean welds.</p>
+        <div class="grid">
+          <div class="card"><div class="ph"></div><h3>Goliath</h3><p>Hero off‑road build. Long‑travel, caged, dialed.</p></div>
+          <div class="card"><div class="ph"></div><h3>Chassis & Cages</h3><p>TIG/MIG, chromoly, safety-first fabrication.</p></div>
+          <div class="card"><div class="ph"></div><h3>Custom Concepts</h3><p>Logos, media, storytelling — your brand, louder.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Eric</h2>
+        <p>Builder. Storyteller. Podcaster. I blend <em>hands-on fabrication</em> with <em>media and community</em> to make things people feel. If you need a rig that rips — or a story that sticks — I’m your guy.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Want to collaborate, book a build, or get on the podcast?</p>
+        <form id="contact-form">
+          <div class="row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
+          <textarea name="message" placeholder="Tell me what's up" rows="5" required></textarea>
+          <button class="btn primary" type="submit">Send</button>
+          <p class="form-note">This demo form uses a mailto: fallback. Swap in a real form handler when ready.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Eric Vono. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
