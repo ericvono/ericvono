@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eric Vono — Official Site</title>
-  <meta name="description" content="The official home base for Eric Vono — Relax Bro podcast, motorsports & fabrication, media, and more." />
+  <title>Eric Vono – Official Site</title>
+  <meta name="description" content="The official home base for Eric Vono – Relax Bro podcast, motorsports & fabrication, media, and more.">
+
+  <!-- favicon + logo preload -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container navwrap">
-      <a class="brand" href="#home">
-        <img src="assets/logo.svg" alt="Eric Vono logo" class="brand-logo" />
-      </a>
-      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="site-nav">
-        <a href="#home">Home</a>
-        <a href="#podcast">Relax Bro</a>
-        <a href="#work">Builds</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="cta">Contact</a>
-      </nav>
-    </div>
-  </header>
-
+<header class="site-header">
+  <div class="container header-flex">
+    <a class="logo-link" href="/"> <!-- go to homepage -->
+      <img src="assets/logo.svg" alt="Eric Vono logo" class="logo">
+    </a>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#about">About</a>
+      <a class="btn" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
   <main id="home">
     <section class="hero">
       <div class="container">
