@@ -25,10 +25,24 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  /* metal shine */
-  background: linear-gradient(90deg, #dcdcdc, #8a8a8a, #dcdcdc);
+  background: linear-gradient(
+    120deg,
+    #dcdcdc 20%,
+    #ffffff 40%,
+    #8a8a8a 60%,
+    #dcdcdc 80%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 html,body{height:100%}
