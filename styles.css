@@ -100,4 +100,12 @@ h2{font-size: clamp(28px, 5vw, 40px); margin-bottom:14px}
   font-size:20px;
   color:var(--ink);
   text-decoration:none;
+/* Hero Banner */
+.hero-banner {
+  display: block;
+  margin: 0 auto;          /* centers it */
+  max-width: 100%;         /* scales with screen */
+  height: auto;            /* keeps proportions */
+  border-radius: 8px;      /* optional: rounded corners */
+}
 }
