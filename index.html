@@ -3,127 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eric Vono — Official Site</title>
-  <meta name="description" content="Eric Vono: Relax Bro podcast, motorsports & fabrication, and media." />
+  <title>Eric Vono — Relax Bro, Builds & Fabrication</title>
+  <meta name="description" content="Eric Vono — Relax Bro podcast, builds & fabrication, motorsports, media, and art." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eric Vono — Relax Bro" />
+  <meta property="og:description" content="Stories, fabrication, and real talk." />
+  <meta property="og:image" content="https://ericvono.com/assets/relaxbro-blood.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ericvono.com/" />
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" as="image" href="assets/ericvono-metal.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <!-- Header -->
   <header class="site-header">
-    <div class="container navwrap">
-      <a class="brand" href="#home" aria-label="Eric Vono — home">
-        <span class="brand-mark">EV</span><span class="brand-text">ERIC VONO</span>
+    <div class="container header-row">
+      <a class="brand" href="#home">
+        <img src="assets/ericvono-metal.png" alt="Eric Vono logo" class="brand-mark" />
+        <span class="brand-text">ERIC VONO</span>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
-      <nav class="site-nav" id="site-nav">
+      <nav id="siteNav" class="site-nav">
         <a href="#home">Home</a>
         <a href="#podcast">Relax Bro</a>
-        <a href="#builds">Builds</a>
+        <a href="#work">Builds</a>
         <a href="#about">About</a>
-        <a class="btn" href="#contact">Contact</a>
+        <a href="#contact" class="btn">Contact</a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <main id="home">
-    <!-- HERO -->
     <section class="hero">
-      <div class="grit"></div>
-      <div class="container hero-inner">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
         <img src="assets/ericvono-metal.png" alt="Eric Vono metal logo" class="hero-logo" />
-        <p class="tagline">
-          Home base for <strong>Relax Bro</strong>, motorsports, welding &amp; fabrication, and media.
-        </p>
+        <h1 class="hero-title">Relax Bro — stories, fabrication, and real talk.</h1>
+        <p class="hero-tag">Home base for Relax Bro, motorsports, welding & fabrication, and media.</p>
         <div class="cta-row">
-          <a href="#podcast" class="btn primary">Listen to Relax Bro</a>
-          <a href="#builds" class="btn">See the Work</a>
+          <a href="#podcast" class="btn primary">Listen on Spotify</a>
+          <a href="#work" class="btn">See the Builds</a>
         </div>
       </div>
-      <div class="sparks"></div>
+      <!-- sparks / texture layers handled in CSS -->
     </section>
 
-    <!-- PODCAST -->
+    <!-- Podcast -->
     <section id="podcast" class="section">
       <div class="container">
         <h2>Relax Bro — Latest</h2>
-        <p>Stories, therapy-style conversations, and real talk.</p>
+        <p>Therapy-style conversations and real talk. New episodes drop regularly.</p>
 
-        <div class="podcast-grid">
+        <div class="player-card">
+          <!-- Replace the src with your real Spotify embed url -->
+          <iframe
+            title="Relax Bro on Spotify"
+            src="https://open.spotify.com/embed/show/0Hq0h0x0x0x0x0x0x0"
+            width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media">
+          </iframe>
+        </div>
+
+        <div class="art-grid">
           <figure class="tile">
-            <img src="assets/relaxbro-blood.jpg" alt="Relax Bro artwork (blood splash)" />
-            <figcaption>Latest Drop</figcaption>
+            <img src="assets/relaxbro-blood.jpg" alt="Relax Bro artwork (blood edition)" />
+            <figcaption>Relax Bro — Blood Edition</figcaption>
           </figure>
           <figure class="tile">
-            <img src="assets/relaxbro-ocean.jpg" alt="Relax Bro artwork (ocean)" />
-            <figcaption>Classic Vibes</figcaption>
+            <img src="assets/relaxbro-ocean.jpg" alt="Relax Bro artwork (ocean edition)" />
+            <figcaption>Relax Bro — Ocean Edition</figcaption>
           </figure>
-          <div class="player-card">
-            <!-- TODO: replace src with your real Spotify/Apple embed -->
-            <iframe
-              src="https://open.spotify.com/embed/show/0Hq0h0x0x0x0x0x0?utm_source=generator"
-              width="100%" height="232" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              title="Relax Bro player"></iframe>
-            <div class="subscribe-row">
-              <a class="pill" href="#" target="_blank" rel="noopener">Apple Podcasts</a>
-              <a class="pill" href="#" target="_blank" rel="noopener">Spotify</a>
-              <a class="pill" href="#" target="_blank" rel="noopener">YouTube</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- BUILDS -->
-    <section id="builds" class="section alt">
+    <!-- Builds -->
+    <section id="work" class="section alt">
       <div class="container">
-        <h2>Builds &amp; Fabrication</h2>
-        <p>From <strong>Goliath</strong> to custom race vehicles — precision metalwork, suspension magic, and clean welds.</p>
+        <h2>Builds & Fabrication</h2>
+        <p>From <strong>Goliath</strong> to custom race vehicles — precision metalwork, suspension magic, clean welds.</p>
 
         <div class="grid">
           <div class="card">
-            <div class="ph steel"></div>
             <h3>Goliath</h3>
             <p>Hero off-road build. Long-travel, caged, dialed.</p>
           </div>
           <div class="card">
-            <div class="ph mesh"></div>
-            <h3>Chassis &amp; Cages</h3>
+            <h3>Chassis & Cages</h3>
             <p>TIG/MIG, chromoly, safety-first fabrication.</p>
           </div>
           <div class="card">
-            <div class="ph sparks"></div>
             <h3>Custom Concepts</h3>
             <p>Logos, media, storytelling — your brand, louder.</p>
           </div>
         </div>
       </div>
     </section>
-<section id="art" class="section">
-  <div class="container">
-    <h2>Art & Covers</h2>
-    <div class="podcast-grid">
-      <figure class="tile">
-        <img src="assets/relaxbro-blood.jpg" alt="Relax Bro artwork (blood splash)" />
-        <figcaption>Relax Bro — Blood Edition</figcaption>
-      </figure>
-      <figure class="tile">
-        <img src="assets/relaxbro-ocean.jpg" alt="Relax Bro artwork (ocean)" />
-        <figcaption>Relax Bro — Ocean Edition</figcaption>
-      </figure>
-      <figure class="tile">
-        <img src="assets/ericvono-metal.png" alt="Eric Vono metal logo" />
-        <figcaption>EricVono.com Metal Logo</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
 
-    <!-- ABOUT -->
+    <!-- Art gallery (metal logo too) -->
+    <section id="art" class="section">
+      <div class="container">
+        <h2>Art & Covers</h2>
+        <div class="art-grid">
+          <figure class="tile">
+            <img src="assets/relaxbro-blood.jpg" alt="Relax Bro — Blood" />
+            <figcaption>Blood edition</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="assets/relaxbro-ocean.jpg" alt="Relax Bro — Ocean" />
+            <figcaption>Ocean edition</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="assets/ericvono-metal.png" alt="EricVono.com Metal Logo" />
+            <figcaption>Metal logo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
     <section id="about" class="section">
       <div class="container">
         <h2>About Eric</h2>
@@ -131,25 +133,24 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- Contact -->
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
-        <p>Want to collaborate, book a build, or get on the podcast?</p>
-
-        <form id="contact-form">
+        <form id="contact-form" class="contact-form">
           <div class="row">
             <input type="text" name="name" placeholder="Your name" required />
             <input type="email" name="email" placeholder="Your email" required />
           </div>
-          <textarea name="message" rows="5" placeholder="Tell me what's up"></textarea>
+          <textarea name="message" placeholder="Tell me what's up" rows="5" required></textarea>
           <button class="btn primary" type="submit">Send</button>
-          <p class="form-note">This form uses a mailto fallback. Swap in a real handler when ready.</p>
+          <p class="form-note">This demo uses a simple alert. We can wire a real form later (Formspree, EmailJS, etc.).</p>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <p>© <span id="year"></span> Eric Vono. All rights reserved.</p>
