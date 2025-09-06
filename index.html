@@ -6,143 +6,167 @@
   <title>Eric Vono — Official Site</title>
   <meta name="description" content="Relax Bro podcast, builds & fabrication, media, and more." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Display fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Teko:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Skip link for a11y -->
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Header / Nav -->
   <header class="site-header">
     <div class="container header-flex">
-      <a href="#" class="brand">
-        <span class="brand-mark" aria-hidden="true">EV</span>
-        <span class="brand-text">ERIC VONO</span>
-      </a>
+      <a class="brand shiny" href="#home" aria-label="Eric Vono Home">ERIC VONO</a>
 
-      <nav id="site-nav" class="site-nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="#home">Home</a>
-        <a href="#podcast">Relax Bro</a>
+        <a href="#relaxbro">Relax Bro</a>
         <a href="#builds">Builds</a>
         <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
         <a href="#contact" class="btn">Contact</a>
       </nav>
-
-      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">☰</button>
     </div>
   </header>
 
-  <main id="home">
+  <main id="main">
     <!-- HERO -->
-    <section class="hero section">
+    <section id="home" class="hero">
       <div class="container hero-grid">
-        <div>
-          <h1 class="display shiny">Relax Bro — stories, fabrication, and real talk.</h1>
-          <p class="tagline">Home base for Relax Bro, motorsports, welding & fabrication, and media.</p>
+        <div class="hero-copy">
+          <h1 class="hero-title shiny">
+            RELAX BRO — STORIES, FABRICATION, AND REAL TALK.
+          </h1>
+          <p class="tagline">
+            Home base for Relax Bro, motorsports, welding &amp; fabrication, and media.
+          </p>
           <div class="cta-row">
-            <a href="#podcast" class="btn primary">Listen to Relax Bro</a>
-            <a href="#builds" class="btn">See the Builds</a>
+            <a href="#relaxbro" class="btn primary">Listen to Relax Bro</a>
+            <a href="#builds" class="btn secondary">See the Builds</a>
           </div>
         </div>
-        <div aria-hidden="true" class="hero-panel tile-metal"></div>
+
+        <!-- Decorative panel (no images) -->
+        <div class="hero-panel metal-panel" aria-hidden="true"></div>
       </div>
-      <div class="hero-metal" aria-hidden="true"></div>
     </section>
 
-    <!-- PODCAST -->
-    <section id="podcast" class="section alt">
+    <!-- RELAX BRO -->
+    <section id="relaxbro" class="section">
       <div class="container">
         <h2>Relax Bro — Latest</h2>
         <p>Therapy-style conversations and real talk. New episodes drop regularly.</p>
 
-        <div class="panel card">
-          <div class="ph steel" aria-hidden="true"></div>
-          <div>
-            <h3>Player placeholder</h3>
-            <p>Add your Spotify or Apple Podcasts embed here later.</p>
-          </div>
+        <!-- Player placeholder (replace with Spotify embed when ready) -->
+        <div class="metal-panel pad">
+          <p class="muted"><strong>Player placeholder</strong> — add your Spotify embed later.</p>
         </div>
 
-        <div class="tiles">
-          <a class="tile card" href="#"><h3>Latest Drop</h3><p>Fresh episode notes & links.</p></a>
-          <a class="tile card" href="#"><h3>Classic Vibes</h3><p>Fan favorites from the vault.</p></a>
-          <a class="tile card" href="#"><h3>Behind the Mic</h3><p>Gear, process, and stories.</p></a>
+        <div class="cards">
+          <a class="card metal-panel" href="#">
+            <h3>Latest Drop</h3>
+            <p>Fresh episode: notes & links.</p>
+          </a>
+          <a class="card metal-panel" href="#">
+            <h3>Classic Vibes</h3>
+            <p>Fan favorites from the vault.</p>
+          </a>
+          <a class="card metal-panel" href="#">
+            <h3>Behind the Mic</h3>
+            <p>Gear, workflow, and the process.</p>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- BUILDS -->
-    <section id="builds" class="section">
+    <section id="builds" class="section alt">
       <div class="container">
-        <h2>Builds & Fabrication</h2>
-        <p>From Goliath to custom race vehicles — precision metalwork, suspension magic, and clean welds.</p>
+        <h2>Builds &amp; Fabrication</h2>
+        <p>From Goliath to custom race vehicles — precision metalwork, suspension magic, clean welds.</p>
 
         <div class="tiles">
-          <a class="tile card" href="#"><h3>Goliath</h3><p>Hero off-road build. Long-travel, caged, dialed.</p></a>
-          <a class="tile card" href="#"><h3>Chassis & Cages</h3><p>TIG/MIG, chromoly, safety-first fabrication.</p></a>
-          <a class="tile card" href="#"><h3>Custom Concepts</h3><p>Logos, media, storytelling — your brand, louder.</p></a>
+          <a class="tile metal-panel" href="#">
+            <h3>Goliath</h3>
+            <p>Hero off-road build. Long-travel, caged, dialed.</p>
+          </a>
+          <a class="tile metal-panel" href="#">
+            <h3>Chassis &amp; Cages</h3>
+            <p>TIG/MIG, chromoly, safety-first fabrication.</p>
+          </a>
+          <a class="tile metal-panel" href="#">
+            <h3>Custom Concepts</h3>
+            <p>Logos, media, storytelling — your brand, louder.</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="section alt">
+    <!-- GALLERY (no images yet) -->
+    <section id="gallery" class="section">
       <div class="container">
         <h2>Gallery</h2>
-        <p>Drop new art, covers, and build shots here when you’re ready.</p>
+        <p>Add artwork and build photos here later. Drop files into <code>/assets</code> and link them.</p>
 
-        <div class="gallery">
-          <a class="slot" href="#"><span class="slot-note">Click to add</span></a>
-          <a class="slot" href="#"><span class="slot-note">Click to add</span></a>
-          <a class="slot" href="#"><span class="slot-note">Click to add</span></a>
-          <a class="slot" href="#"><span class="slot-note">Click to add</span></a>
-          <a class="slot" href="#"><span class="slot-note">Click to add</span></a>
-          <a class="slot" href="#"><span class="slot-note">Click to add</span></a>
+        <div class="gallery-grid">
+          <!-- Placeholder slots -->
+          <div class="slot metal-panel"><span class="slot-note">+ Add image</span></div>
+          <div class="slot metal-panel"><span class="slot-note">+ Add image</span></div>
+          <div class="slot metal-panel"><span class="slot-note">+ Add image</span></div>
+          <div class="slot metal-panel"><span class="slot-note">+ Add image</span></div>
+          <div class="slot metal-panel"><span class="slot-note">+ Add image</span></div>
+          <div class="slot metal-panel"><span class="slot-note">+ Add image</span></div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section alt">
       <div class="container">
         <h2>About Eric</h2>
-        <p>Builder. Storyteller. Podcaster. I blend hands-on fabrication with media and community to make things people love.</p>
+        <p>
+          Builder. Storyteller. Podcaster. I blend hands-on fabrication with media and community to make things people love.
+        </p>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section alt">
+    <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
         <p>Want to collaborate, book a build, or get on the podcast?</p>
 
-        <form id="contact-form" class="contact-form" action="mailto:eric@example.com" method="post" enctype="text/plain">
-          <div class="row">
+        <form class="contact-form metal-panel pad" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <div class="form-row">
             <input type="text" name="name" placeholder="Your name" required />
             <input type="email" name="email" placeholder="Your email" required />
           </div>
-          <textarea name="message" placeholder="Tell me what's up" rows="4" required></textarea>
-          <button class="btn primary" type="submit">Send</button>
-          <p class="form-note">This is a temporary mailto form. We’ll swap in a real handler later.</p>
+          <textarea name="message" rows="5" placeholder="Tell me what's up"></textarea>
+          <button type="submit" class="btn primary">Send</button>
+          <p class="form-note muted">This is a temporary mailto form. We’ll swap in a real handler later.</p>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <p><span id="year"></span> Eric Vono. All rights reserved.</p>
+    <div class="container footer-flex">
+      <small>© <span id="year"></span> Eric Vono. All rights reserved.</small>
       <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">Spotify</a>
-        <a href="#">YouTube</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="TikTok">TT</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js"></script>
 </body>
 </html>
