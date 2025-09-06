@@ -94,16 +94,18 @@ body {
 }
 
 /* Texture overlay */
-body::before {
-  content: "";
+body:before{
+  content:"";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, transparent 1px, transparent 3px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, transparent 2px, transparent 4px);
-  pointer-events: none;
-  opacity: 0.3;
+  inset: 0;                              /* top/right/bottom/left:0 */
+  background-image:
+    repeating-linear-gradient(60deg, rgba(255,255,255,.04) 0px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(900deg, rgba(255,255,255,.04) 0px, transparent 2px, transparent 4px);
+  pointer-events: none;                   /* never block clicks */
+  opacity: .30;
+  z-index: -1;                            /* <<< pushes it behind all content */
 }
+
 
 /* Containers & sections */
 .container{width:min(1100px, 92vw); margin-inline:auto; padding:0 0}
