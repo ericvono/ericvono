@@ -1,14 +1,11 @@
-// Mobile nav toggle
-const toggle = document.getElementById('nav-toggle');
-const nav = document.getElementById('site-nav');
-
+// Mobile nav toggle + current year
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('#site-nav');
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 }
-
-// Dynamic year in footer
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
