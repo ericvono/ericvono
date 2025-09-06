@@ -12,6 +12,25 @@
   --hot:#ff7b39;          /* CTA warm accent */
 }
 
+/* Typography */
+body {
+  font-family: 'Teko', sans-serif; /* clean bold look */
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  /* metal shine */
+  background: linear-gradient(90deg, #dcdcdc, #8a8a8a, #dcdcdc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 html,body{height:100%}
 body{
   margin:0;
