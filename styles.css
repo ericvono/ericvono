@@ -11,6 +11,7 @@
   --blood:#a80f26;         /* subtle blood red */
   --panel: rgba(255,255,255,.035);
   --line:  rgba(255,255,255,.1);
+--hero-image: url('assets/relaxbro-blood.jpg');
 
   /* hero background image (swap blood/ocean here) */
   --hero-image: url('assets/relaxbro-ocean.jpg');
