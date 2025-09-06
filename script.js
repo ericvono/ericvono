@@ -1,28 +1,26 @@
-// Mobile nav
-const btn = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.site-nav');
-if (btn){
-  btn.addEventListener('click', () => {
+// Mobile nav toggle
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('site-nav');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 }
 
-// Year
+// Footer year
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
 
-// Contact form — simple mailto fallback
+// Simple mailto fallback for the contact form
 const form = document.getElementById('contact-form');
-if (form){
+if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    const name = data.get('name');
-    const email = data.get('email');
-    const msg = data.get('message');
-    const subject = encodeURIComponent('Website Contact — EricVono.com');
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
-    window.location.href = `mailto:hello@ericvono.com?subject=${subject}&body=${body}`;
+    const name = encodeURIComponent(data.get('name') || '');
+    const email = encodeURIComponent(data.get('email') || '');
+    const msg = encodeURIComponent(data.get('message') || '');
+    window.location.href = `mailto:hello@ericvono.com?subject=Website%20Contact%20from%20${name}&body=From:%20${name}%20%3C${email}%3E%0A%0A${msg}`;
   });
 }
