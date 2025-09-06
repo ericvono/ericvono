@@ -71,14 +71,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html,body{height:100%}
-body{
-  margin:0;
-  color:var(--ink);
-  font:16px/1.6 ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  background:
-    radial-gradient(1200px 600px at 20% 12%, rgba(154,125,255,.10), transparent),
-    radial-gradient(1200px 500px at 80% 60%, rgba(45,212,255,.12), transparent),
-    linear-gradient(180deg, #0b1022 0%, #0e0a1d 60%, #0c1120 100%);
+body {
+  margin: 0;
+  color: var(--ink);
+  font: 16px/1.6 ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+  /* Beat-up metal background */
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(200,200,200,0.08), transparent 60%),
+    radial-gradient(circle at 80% 40%, rgba(120,0,0,0.2), transparent 70%),
+    repeating-linear-gradient(
+      45deg,
+      #555,
+      #666 2px,
+      #444 2px,
+      #555 4px
+    ),
+    linear-gradient(180deg, #2b2b2b, #1a1a1a);
+  background-blend-mode: overlay, multiply, normal;
+}
+
 }
 
 /* Texture overlay */
