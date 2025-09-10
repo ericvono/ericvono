@@ -229,3 +229,138 @@ textarea{ resize:vertical }
 @media (max-width: 480px){
   .spotify-player{ height: 180px; } /* shorter on phones */
 }
+/* ====== THEME VARS ====== */
+:root{
+  --bg:#0b0d10;           /* site bg */
+  --steel:#1e232a;        /* brushed steel */
+  --edge:#c23;            /* dark red accent */
+  --edge2:#ff3b3b;        /* hot red for glow peaks */
+  --txt:#e8eaee;          /* text */
+  --glass:#ffffffcc;      /* highlight */
+}
+
+/* Optional site body colors */
+body{ background: var(--bg); color: var(--txt); }
+
+/* ====== SHINE SWEEP ====== */
+.shine {
+  position: relative;
+  color: var(--txt);
+  overflow: hidden;
+  isolation: isolate;
+}
+.shine::after{
+  content:"";
+  position:absolute; inset:-20% -120% -20% -120%;
+  background: linear-gradient(100deg,
+    transparent 40%,
+    rgba(255,255,255,0.12) 50%,
+    rgba(255,255,255,0.55) 54%,
+    rgba(255,255,255,0.12) 58%,
+    transparent 68%);
+  transform: translateX(-60%) rotate(8deg);
+  animation: shineSweep 3.2s cubic-bezier(.22,.61,.36,1) infinite;
+  pointer-events:none;
+  mix-blend-mode: screen;
+}
+@keyframes shineSweep {
+  0%   { transform: translateX(-60%) rotate(8deg); opacity: 0.2; }
+  48%  { opacity: 1; }
+  100% { transform: translateX(60%)  rotate(8deg); opacity: 0.2; }
+}
+
+/* ====== BRUSHED METAL SECTION ====== */
+.brushed {
+  background:
+    repeating-linear-gradient(90deg, #161a1f 0 1px, #13171b 1px 2px),
+    linear-gradient(180deg, #0f1318, #0b0f13 60%, #0a0d11);
+  box-shadow: inset 0 1px 0 #2a2f37, inset 0 -1px 0 #080a0d;
+  border: 1px solid #1c2127;
+  border-radius: 16px;
+}
+
+/* ====== FUTURISTIC BUTTONS ====== */
+.button {
+  --radius: 14px;
+  --padY: .9rem; --padX: 1.2rem;
+  --glow: 0 0 0 transparent;
+  position: relative;
+  display: inline-flex; align-items:center; gap:.6rem;
+  padding: var(--padY) var(--padX);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg,#1d232b,#14181e);
+  color: var(--txt);
+  border: 1px solid #2a313a;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 8px 18px rgba(0,0,0,.35),
+    var(--glow);
+  text-decoration:none; font-weight:600; letter-spacing:.02em;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  overflow:hidden;
+}
+.button::after{
+  content:"";
+  position:absolute; inset:-30% -120% -30% -120%;
+  background: linear-gradient(100deg,
+    transparent 45%, rgba(255,255,255,.18) 50%,
+    rgba(255,255,255,.6) 52%, rgba(255,255,255,.18) 56%,
+    transparent 62%);
+  transform: translateX(-80%) rotate(12deg);
+  opacity:0; pointer-events:none; mix-blend-mode: screen;
+}
+.button:hover::after{
+  animation: btnSheen 1.6s cubic-bezier(.22,.61,.36,1);
+  opacity:1;
+}
+@keyframes btnSheen {
+  0%   { transform: translateX(-80%) rotate(12deg); opacity:.2; }
+  100% { transform: translateX(80%)  rotate(12deg); opacity:.8; }
+}
+
+/* Neon edge variant */
+.button--neo {
+  border: 1px solid color-mix(in srgb, var(--edge) 60%, #fff 10%);
+  box-shadow:
+    inset 0 0 10px rgba(255,59,59,.06),
+    0 0 18px rgba(255,59,59,.12),
+    0 0 38px rgba(255,59,59,.08);
+  background:
+    radial-gradient(120% 160% at 10% 10%, rgba(255,59,59,.14), transparent 40%),
+    linear-gradient(180deg, #1a1f26, #12161b);
+}
+.button--neo:hover{
+  --glow: 0 0 22px rgba(255,59,59,.35);
+  border-color: color-mix(in srgb, var(--edge2) 70%, #fff 15%);
+  transform: translateY(-1px) scale(1.01);
+}
+.button--neo:active{ transform: translateY(0) scale(.995); }
+
+/* Ghost / holographic variant */
+.button--holo{
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--txt) 30%, #ff3b3b 20%);
+  box-shadow: inset 0 0 12px rgba(255,255,255,.05);
+}
+.button--holo:hover{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+}
+
+/* Smaller chip size */
+.button--chip{
+  --padY: .55rem; --padX: .8rem; --radius: 12px;
+  font-weight:500;
+}
+
+/* Subtle breathing glow */
+@keyframes pulseGlow {
+  0%,100% { box-shadow: 0 0 24px rgba(255,59,59,.15), inset 0 0 12px rgba(255,59,59,.06); }
+  50%     { box-shadow: 0 0 42px rgba(255,59,59,.28), inset 0 0 18px rgba(255,59,59,.10); }
+}
+.button--pulse { animation: pulseGlow 2.8s ease-in-out infinite; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .shine::after, .button::after, .button--pulse { animation: none !important; }
+  .button { transition: none !important; }
+}
