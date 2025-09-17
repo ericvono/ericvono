@@ -2,136 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eric Vono — Relax Bro Podcast</title>
-  <meta name="description" content="Relax Bro is a testimony-driven podcast by Eric Vono. Real people. Real stories. Share your story to help someone keep going." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eric Vono • Relax Bro Podcast</title>
+
+  <!-- Aggressive / fast-looking fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <header class="hdr">
-    <nav class="nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="title">ERIC VONO • RELAX BRO</div>
-      </div>
-      <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#podcast">Podcast</a>
-        <a href="#stories">Stories</a>
-        <a href="#submit">Share Yours</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="socials">
-        <a class="icon-btn icon-pulse" href="https://instagram.com/relaxbropodcast" target="_blank" rel="noopener" aria-label="Instagram @relaxbropodcast">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 ..."/></svg>
-        </a>
-        <a class="icon-btn" href="https://instagram.com/ericvono" target="_blank" rel="noopener" aria-label="Instagram @ericvono">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 ..."/></svg>
-        </a>
-        <a class="icon-btn" href="https://www.youtube.com/@relaxbropodcast" target="_blank" rel="noopener" aria-label="YouTube @relaxbropodcast">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a4 4 0 0 0-2.8-2.8 ..."/></svg>
-        </a>
-      </div>
-    </nav>
-  </header>
+<header class="nav">
+  <a class="brand" href="/">ERIC VONO • <span class="hi-chrome">RELAX BRO</span></a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/podcast">Podcast</a>
+    <a href="#stories">Stories</a>
+    <a href="#share">Share Yours</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="panel hero-copy">
-        <div class="kicker">Testimony • Truth • Hope</div>
-        <h1>Real People. Real Stories.</h1>
-        <p class="sub">Your story matters—and it might be the reason someone else keeps going. Share it with Relax Bro and be heard.</p>
-        <div class="cta-row">
-          <a href="#podcast" class="btn btn-lime">
-            <svg class="bolt" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
-            Listen on Spotify
-          </a>
-          <a href="#submit" class="btn">Share Your Story</a>
-        </div>
+<main>
+
+  <!-- HERO / PITCH -->
+  <section class="hero wrapper">
+    <div class="hero-card">
+      <p class="eyebrow">TESTIMONY • TRUTH • HOPE</p>
+      <h1 class="steel-head">Real People. Real Stories.</h1>
+      <p class="sub">Your story matters—and it might be the reason someone else keeps going. Share it with Relax Bro and be heard.</p>
+
+      <div class="cta-row">
+        <a class="btn spotify" href="#latest">Listen on Spotify</a>
+        <a class="btn line" href="#share">Share Your Story</a>
       </div>
-      <div class="panel slab">
-        <div class="slideshow" id="slideshow">
-          <img id="imgA" alt="Gallery image" />
-          <img id="imgB" alt="Gallery image" />
-          <div class="slide-controls">
-            <button id="prevBtn" aria-label="Previous slide">‹</button>
-            <button id="nextBtn" aria-label="Next slide">›</button>
-            <button id="pauseBtn" class="pause" aria-label="Pause slideshow">Pause</button>
+    </div>
+
+    <!-- SLIDESHOW (10 images) -->
+    <div class="gallery-card">
+      <div id="rb-slider" class="slider">
+        <!-- Slides are injected by script.js from the imageList[] -->
+        <button class="nav prev" aria-label="Previous">&#10094;</button>
+        <button class="nav next" aria-label="Next">&#10095;</button>
+        <div class="dots" id="rb-dots"></div>
+      </div>
+      <div class="gallery-note">Faces &amp; Moments</div>
+    </div>
+  </section>
+
+  <!-- LATEST EPISODE (Spotify embed) -->
+  <section id="latest" class="wrapper card pad">
+    <h2 class="steel-sub">Latest Episode</h2>
+    <!-- Keep/replace this src with your current embed from Spotify -->
+    <div class="spotify-embed">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/episode/26ia6d5zh6mI68ITuZNYVI?utm_source=generator"
+        width="100%" height="352" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- WHY TESTIMONIES MATTER -->
+  <section id="stories" class="wrapper">
+    <h2 class="steel-sub">Why Testimonies Matter</h2>
+    <div class="pill-grid">
+      <div class="pill">
+        <h3>Grit</h3>
+        <p>We’ve all taken hits. The story of how you got back up can be a lifeline to someone still on the ground.</p>
+      </div>
+      <div class="pill">
+        <h3>Truth</h3>
+        <p>No filters. No fluff. Just the honest path from where you were to where you are now.</p>
+      </div>
+      <div class="pill">
+        <h3>Hope</h3>
+        <p>Your voice can light the way. When you talk, someone else finds a next step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE YOUR STORY -->
+  <section id="share" class="wrapper">
+    <h2 class="steel-sub">Share Your Story</h2>
+    <div class="share-grid">
+      <a class="share-card" href="mailto:relaxbropodcast@gmail.com">
+        <h3>Email</h3>
+        <p>Send quick details—name, city, and a few story beats. We’ll book a time.</p>
+        <span class="chip">relaxbropodcast@gmail.com</span>
+      </a>
+
+      <a class="share-card" href="https://instagram.com/relaxbropodcast" target="_blank" rel="noopener">
+        <h3>DM (Instagram)</h3>
+        <p>Message <strong>@relaxbropodcast</strong>. We’ll take it from there.</p>
+        <span class="chip">@relaxbropodcast</span>
+      </a>
+
+      <a class="share-card" href="#contact">
+        <h3>Form</h3>
+        <p>Prefer typing here? Use the contact form below.</p>
+        <span class="chip">Quick form</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SOCIAL CARDS (with icons + image thumbs you can swap) -->
+  <section id="social" class="wrapper">
+    <h2 class="steel-sub">Follow &amp; Subscribe</h2>
+    <div class="social-grid">
+
+      <a class="social-card" href="https://instagram.com/relaxbropodcast" target="_blank" rel="noopener">
+        <img src="/assets/social/relaxbro-thumb.jpg" alt="relaxbropodcast instagram">
+        <div class="social-meta">
+          <div class="icon ig" aria-hidden="true"></div>
+          <div>
+            <div class="social-title">@relaxbropodcast</div>
+            <div class="social-sub">Instagram</div>
           </div>
         </div>
-      </div>
-    </section>
+      </a>
 
-    <section id="podcast" class="pod">
-      <h2>Latest Episode</h2>
-      <div class="embed-shell">
-        <iframe style="border-radius:12px; width:100%; height:352px"
-          src="https://open.spotify.com/embed/episode/26ia6d5zh6mI68ITuZNYVI?utm_source=generator"
-          frameborder="0" allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"></iframe>
-      </div>
-    </section>
-
-    <section id="stories">
-      <h2>Why Testimonies Matter</h2>
-      <div class="cols">
-        <div class="col"><h3>Grit</h3><p>We’ve all taken hits. The story of how you got back up can be a lifeline to someone still on the ground.</p></div>
-        <div class="col"><h3>Truth</h3><p>No filters. No fluff. Just the honest path from where you were to where you are now.</p></div>
-        <div class="col"><h3>Hope</h3><p>Your voice can light the way. When you talk, someone else finds a next step.</p></div>
-      </div>
-    </section>
-
-    <section id="submit" class="submit">
-      <h2>Share Your Story</h2>
-      <div class="methods">
-        <a class="card" href="mailto:relaxbropodcast+booking@gmail.com?subject=I%20want%20to%20share%20my%20story">
-          <h4>Email</h4><p>Send quick details—name, city, and a few story beats. We’ll book a time.</p>
-        </a>
-        <a class="card" href="https://instagram.com/relaxbropodcast" target="_blank" rel="noopener">
-          <h4>DM (Instagram)</h4><p>Message <strong>@relaxbropodcast</strong>. We’ll take it from there.</p>
-        </a>
-        <a class="card" href="#contact">
-          <h4>Form</h4><p>Use the contact form below if you prefer typing here.</p>
-        </a>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <h2>Faces & Moments</h2>
-      <p class="muted">Drop photos into <code>assets/gallery/</code> as <code>photo01.jpg</code> … <code>photo60.jpg</code>. They’ll shuffle automatically.</p>
-      <div class="slab small">
-        <div class="slideshow" id="slideshow2">
-          <img id="imgC" alt="Gallery image" />
-          <img id="imgD" alt="Gallery image" />
+      <a class="social-card" href="https://instagram.com/ericvono" target="_blank" rel="noopener">
+        <img src="/assets/social/ericvono-thumb.jpg" alt="ericvono instagram">
+        <div class="social-meta">
+          <div class="icon ig" aria-hidden="true"></div>
+          <div>
+            <div class="social-title">@ericvono</div>
+            <div class="social-sub">Instagram</div>
+          </div>
         </div>
-      </div>
-    </section>
+      </a>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form class="contact" action="mailto:relaxbropodcast+contact@gmail.com" method="post" enctype="text/plain">
-        <div class="grid">
-          <label>Your name <input type="text" name="name" required></label>
-          <label>Email or IG handle <input type="text" name="contact" required></label>
+      <a class="social-card" href="https://www.youtube.com/@relaxbropodcast" target="_blank" rel="noopener">
+        <img src="/assets/social/youtube-thumb.jpg" alt="Relax Bro on YouTube">
+        <div class="social-meta">
+          <div class="icon yt" aria-hidden="true"></div>
+          <div>
+            <div class="social-title">@relaxbropodcast</div>
+            <div class="social-sub">YouTube</div>
+          </div>
         </div>
-        <label>Message
-          <textarea name="message" rows="5" placeholder="Tell us what you want to share…" required></textarea>
-        </label>
-        <button class="btn btn-lime" type="submit">Send</button>
-      </form>
-    </section>
+      </a>
 
-    <footer>
-      <div class="foot-inner">
-        <small>© <span id="yr"></span> Relax Bro Podcast. Built by Eric Vono & friends.</small>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="wrapper card pad">
+    <h2 class="steel-sub">Contact</h2>
+    <form class="contact" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <div class="grid">
+        <label>Full Name<input name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
       </div>
-    </footer>
-  </main>
+      <label>Message<textarea name="message" rows="5" required></textarea></label>
+      <button class="btn steel" type="submit">Send</button>
+      <p class="small">Or email: <a href="mailto:relaxbropodcast@gmail.com">relaxbropodcast@gmail.com</a></p>
+    </form>
+  </section>
 
-  <script src="script.js"></script>
+</main>
+
+<footer class="footer">
+  <div class="wrapper">
+    <div>© <span id="year"></span> Eric Vono • Relax Bro</div>
+    <div class="spots">
+      <a href="#latest" class="btn tiny spotify">Spotify</a>
+      <a href="https://instagram.com/relaxbropodcast" class="btn tiny line">Instagram</a>
+      <a href="https://www.youtube.com/@relaxbropodcast" class="btn tiny line">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
 </body>
 </html>
