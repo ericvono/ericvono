@@ -1,2 +1,2 @@
-// Year in footer
+// set year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
