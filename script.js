@@ -1,27 +1,22 @@
-// Mobile nav (class toggle, accessible)
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('primary-nav');
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    document.body.classList.toggle('nav-open', !expanded);
-  });
-  nav.addEventListener('click', (e) => {
-    if (e.target.matches('a')) {
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('nav-open');
-    }
-  });
-}
+// Mobile nav toggle + year
+(() => {
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-// Year in footer
-const y = document.getElementById('year');
-if (y) y.textContent = new Date().getFullYear();
+  const toggle = document.querySelector(".navToggle");
+  const nav = document.querySelector(".nav");
+  if (!toggle || !nav) return;
 
-// Pause glare animation for users who prefer reduced motion
-try {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.documentElement.classList.add('reduced-motion');
-  }
-} catch {}
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("isOpen");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // Close nav when clicking a link (mobile)
+  nav.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      nav.classList.remove("isOpen");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
