@@ -1,16 +1,17 @@
-// Year
+// year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Copy link button
-const copyBtn = document.getElementById("copyLinkBtn");
-if (copyBtn) {
-  copyBtn.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(window.location.href.split("#")[0]);
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => (copyBtn.textContent = "Copy site link"), 1200);
-    } catch {
-      alert("Copy failed — just copy the URL from the address bar.");
-    }
-  });
-}
+// copy link
+const btn = document.getElementById("copyLinkBtn");
+const statusEl = document.getElementById("copyStatus");
+
+btn?.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    statusEl.textContent = "Copied!";
+    setTimeout(() => (statusEl.textContent = ""), 1400);
+  } catch (e) {
+    statusEl.textContent = "Copy failed";
+    setTimeout(() => (statusEl.textContent = ""), 1400);
+  }
+});
