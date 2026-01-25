@@ -16,58 +16,111 @@
 <body>
   <!-- TOP BAR -->
   <header class="topbar">
-    <span class="pill">ERIC VONO</span>
+    <a class="brand" href="#top">
+      <span class="pill">ERIC VONO</span>
+    </a>
+
     <nav class="nav">
       <a href="#why">Why Stories Matter</a>
       <a href="#listen">Podcast</a>
+      <a href="#links">Links</a>
       <a href="#get-involved">Get Involved</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-inner">
 
-      <!-- LOGOS -->
       <div class="hero-logos">
-        <img src="assets/relaxbro-script.png" alt="Relax Bro" class="hero-script">
-        <img src="assets/rb-emblem.png" alt="RB Emblem" class="hero-emblem">
+        <img
+          src="assets/relaxbro-script.png"
+          alt="Relax Bro"
+          class="hero-script"
+          loading="eager"
+          onerror="this.style.display='none'; document.getElementById('logoFallback1').style.display='block';"
+        />
+        <div id="logoFallback1" class="logo-fallback" style="display:none;">
+          <strong>Relax Bro</strong>
+          <span>Missing file: <code>assets/relaxbro-script.png</code></span>
+        </div>
+
+        <img
+          src="assets/rb-emblem.png"
+          alt="RB Emblem"
+          class="hero-emblem"
+          loading="eager"
+          onerror="this.style.display='none'; document.getElementById('logoFallback2').style.display='block';"
+        />
+        <div id="logoFallback2" class="logo-fallback logo-fallback-small" style="display:none;">
+          <strong>RB</strong>
+          <span>Missing file: <code>assets/rb-emblem.png</code></span>
+        </div>
       </div>
 
-      <p class="tagline">
-        Real stories. Honest conversations. A place to be heard.
-      </p>
+      <p class="tagline">Real stories. Honest conversations. A place to be heard.</p>
 
-      <!-- CTA BUTTONS -->
       <div class="cta-row">
-        <a href="#listen" class="btn btn-spotify">Listen Now</a>
-        <a href="#listen" class="btn btn-youtube">Watch on YouTube</a>
+        <a class="btn btn-spotify" href="#links">Listen Now</a>
+        <a class="btn btn-youtube" href="#listen">Watch on YouTube</a>
+        <a class="btn btn-outline" href="#why">Why stories matter</a>
       </div>
 
-      <!-- PLATFORM TILES -->
-      <div class="quick-tiles">
-        <a class="tile tile-spotify" href="https://open.spotify.com/" target="_blank">
-          <div class="tile-top"><span class="dot dot-spotify"></span><strong>Spotify</strong></div>
-          <p>Listen now</p>
+      <!-- QUICK LINKS / TILES -->
+      <div class="quick-tiles" id="links">
+        <a class="tile tile-spotify" href="https://open.spotify.com/" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="dot dot-spotify"></span>
+            <strong>Spotify</strong>
+          </div>
+          <p>Listen to episodes</p>
         </a>
 
-        <a class="tile tile-youtube" href="https://youtube.com/" target="_blank">
-          <div class="tile-top"><span class="dot dot-youtube"></span><strong>YouTube</strong></div>
-          <p>Watch episodes</p>
+        <a class="tile tile-youtube" href="https://youtube.com/" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="dot dot-youtube"></span>
+            <strong>YouTube</strong>
+          </div>
+          <p>Watch full episodes</p>
         </a>
 
-        <a class="tile tile-apple" href="https://podcasts.apple.com/" target="_blank">
-          <div class="tile-top"><span class="dot dot-apple"></span><strong>Apple Podcasts</strong></div>
+        <a class="tile tile-apple" href="https://podcasts.apple.com/" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="dot dot-apple"></span>
+            <strong>Apple Podcasts</strong>
+          </div>
           <p>Listen on Apple</p>
         </a>
 
-        <a class="tile tile-site" href="https://ericvono.com" target="_blank">
-          <div class="tile-top"><span class="dot dot-site"></span><strong>ericvono.com</strong></div>
+        <!-- ✅ TikTok added -->
+        <a class="tile tile-tiktok" href="https://www.tiktok.com/@relaxbropodcast" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="dot dot-tiktok"></span>
+            <strong>TikTok</strong>
+          </div>
+          <p>Clips + updates</p>
+        </a>
+
+        <!-- Optional merch tile: update link if you want -->
+        <a class="tile tile-merch" href="https://printify.com/" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="dot dot-merch"></span>
+            <strong>Merch</strong>
+          </div>
+          <p>Shirts / stickers / more</p>
+        </a>
+
+        <a class="tile tile-site" href="https://ericvono.com" target="_blank" rel="noreferrer">
+          <div class="tile-top">
+            <span class="dot dot-site"></span>
+            <strong>ericvono.com</strong>
+          </div>
           <p>Main hub</p>
         </a>
       </div>
 
     </div>
+
     <div class="hero-glow"></div>
   </section>
 
@@ -103,7 +156,6 @@
       <h2>Watch / Listen</h2>
       <p class="muted">Latest Relax Bro episode</p>
 
-      <!-- 🔥 FIXED YOUTUBE EMBED -->
       <div class="embed-wrap">
         <iframe
           class="yt"
@@ -116,9 +168,10 @@
       </div>
 
       <div class="platform-row">
-        <a class="btn btn-spotify" href="https://open.spotify.com/" target="_blank">Open Spotify</a>
-        <a class="btn btn-youtube" href="https://youtube.com/" target="_blank">YouTube Channel</a>
-        <a class="btn btn-outline" href="https://ericvono.com" target="_blank">Website Hub</a>
+        <a class="btn btn-spotify" href="https://open.spotify.com/" target="_blank" rel="noreferrer">Open Spotify</a>
+        <a class="btn btn-youtube" href="https://youtube.com/" target="_blank" rel="noreferrer">YouTube Channel</a>
+        <a class="btn btn-tiktok" href="https://www.tiktok.com/@relaxbropodcast" target="_blank" rel="noreferrer">TikTok</a>
+        <a class="btn btn-outline" href="#links">All Links</a>
       </div>
     </div>
   </section>
@@ -138,13 +191,15 @@
         <div class="card">
           <h3>Share the Podcast</h3>
           <p>Send an episode to someone who needs hope.</p>
-          <button class="link" id="copyLinkBtn">Copy site link</button>
+          <button class="link" id="copyLinkBtn" type="button">Copy site link</button>
         </div>
 
         <div class="card">
           <h3>Community</h3>
           <p>We’re building something real. Join the conversation.</p>
-          <a class="link" href="https://instagram.com/relaxbropodcast" target="_blank">Instagram</a>
+          <a class="link" href="https://instagram.com/relaxbropodcast" target="_blank" rel="noreferrer">Instagram</a>
+          <span class="sep">•</span>
+          <a class="link" href="https://www.tiktok.com/@relaxbropodcast" target="_blank" rel="noreferrer">TikTok</a>
         </div>
       </div>
     </div>
