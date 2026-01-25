@@ -1,47 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Relax Bro Podcast</title>
+  <meta name="description" content="Real stories. Honest conversations. A place to be heard." />
   <link rel="stylesheet" href="styles.css" />
-  <meta name="theme-color" content="#0b0f14" />
 </head>
 
 <body>
-  <!-- Top Nav -->
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="Home">
-      <span class="brand-pill">ERIC VONO</span>
-    </a>
+    <a class="brand-pill" href="#top" aria-label="Go to top">ERIC VONO</a>
 
     <nav class="nav">
-      <a href="#stories">Why Stories Matter</a>
+      <a href="#why">Why Stories Matter</a>
       <a href="#podcast">Podcast</a>
       <a href="#links">Links</a>
       <a href="#involved">Get Involved</a>
     </nav>
   </header>
 
-  <!-- Hero -->
   <main id="top" class="wrap">
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-logos">
+        <!-- Put your script logo in /assets/relaxbro-script.png -->
         <img class="hero-script" src="assets/relaxbro-script.png" alt="Relax Bro" />
+        <!-- Put your RB coin/emblem in /assets/rb-emblem.png -->
         <img class="hero-emblem" src="assets/rb-emblem.png" alt="RB Emblem" />
       </div>
 
       <p class="tagline">Real stories. Honest conversations. A place to be heard.</p>
 
-      <div class="hero-actions">
-        <a class="btn btn-green" href="#podcast">Listen Now</a>
+      <div class="cta-row">
+        <a class="btn btn-green" href="#links">Listen Now</a>
         <a class="btn btn-red" href="#podcast">Watch on YouTube</a>
-        <a class="btn btn-ghost" href="#stories">Why stories matter</a>
+        <a class="btn btn-ghost" href="#why">Why stories matter</a>
       </div>
 
-      <!-- Platform Tiles -->
-      <section id="links" class="tiles">
-        <a class="tile anod anod-blue" href="YOUR_SPOTIFY_LINK_HERE" target="_blank" rel="noreferrer">
+      <!-- anodized tiles -->
+      <section id="links" class="tile-grid" aria-label="Platform links">
+        <!-- Replace href values with your real links -->
+        <a class="tile anod-blue" href="https://open.spotify.com/" target="_blank" rel="noopener">
           <div class="tile-top">
             <span class="dot dot-green"></span>
             <span class="tile-title">Spotify</span>
@@ -49,15 +49,15 @@
           <div class="tile-sub">Listen now</div>
         </a>
 
-        <a class="tile anod anod-red" href="https://www.youtube.com/@YOUR_CHANNEL_HERE" target="_blank" rel="noreferrer">
+        <a class="tile anod-red" href="https://www.youtube.com/" target="_blank" rel="noopener">
           <div class="tile-top">
             <span class="dot dot-red"></span>
             <span class="tile-title">YouTube</span>
           </div>
-          <div class="tile-sub">Watch episodes</div>
+          <div class="tile-sub">Watch full episodes</div>
         </a>
 
-        <a class="tile anod anod-purple" href="YOUR_APPLE_PODCASTS_LINK_HERE" target="_blank" rel="noreferrer">
+        <a class="tile anod-purple" href="https://podcasts.apple.com/" target="_blank" rel="noopener">
           <div class="tile-top">
             <span class="dot dot-white"></span>
             <span class="tile-title">Apple Podcasts</span>
@@ -65,7 +65,7 @@
           <div class="tile-sub">Listen on Apple</div>
         </a>
 
-        <a class="tile anod anod-deeppurple" href="YOUR_TIKTOK_LINK_HERE" target="_blank" rel="noreferrer">
+        <a class="tile anod-cobalt" href="https://www.tiktok.com/@relaxbropodcast" target="_blank" rel="noopener">
           <div class="tile-top">
             <span class="dot dot-purple"></span>
             <span class="tile-title">TikTok</span>
@@ -73,101 +73,116 @@
           <div class="tile-sub">Clips + updates</div>
         </a>
 
-        <a class="tile anod anod-copper" href="YOUR_PRINTIFY_OR_SHOPIFY_LINK_HERE" target="_blank" rel="noreferrer">
+        <a class="tile anod-violet" href="#" target="_blank" rel="noopener">
           <div class="tile-top">
-            <span class="dot dot-copper"></span>
+            <span class="dot dot-gold"></span>
             <span class="tile-title">Merch</span>
           </div>
           <div class="tile-sub">Shirts / stickers / more</div>
         </a>
 
-        <a class="tile anod anod-slate" href="https://ericvono.com" target="_blank" rel="noreferrer">
+        <a class="tile anod-slate" href="https://ericvono.com" target="_blank" rel="noopener">
           <div class="tile-top">
-            <span class="dot dot-gold"></span>
-            <span class="tile-title">Main Hub</span>
+            <span class="dot dot-amber"></span>
+            <span class="tile-title">Main hub</span>
           </div>
           <div class="tile-sub">ericvono.com</div>
         </a>
       </section>
     </section>
 
-    <!-- Podcast -->
-    <section id="podcast" class="section">
-      <h2 class="section-title copper-shine">Watch / Listen</h2>
-      <p class="section-sub">Latest Relax Bro episode</p>
-
-      <div class="panel">
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/ejJOKwIbO5c"
-            title="Relax Bro Podcast - Latest Episode"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="quick-links">
-          <a class="btn btn-green" href="YOUR_SPOTIFY_LINK_HERE" target="_blank" rel="noreferrer">Open Spotify</a>
-          <a class="btn btn-red" href="https://www.youtube.com/@YOUR_CHANNEL_HERE" target="_blank" rel="noreferrer">YouTube Channel</a>
-          <a class="btn btn-ghost" href="https://ericvono.com" target="_blank" rel="noreferrer">Website Hub</a>
-        </div>
+    <!-- WHY STORIES MATTER -->
+    <section id="why" class="section">
+      <div class="section-head">
+        <h2>Why Stories Matter</h2>
+        <p class="muted">
+          Stories save lives. When someone shares what they’ve lived through, it becomes a light for someone still walking in the dark.
+        </p>
       </div>
-    </section>
 
-    <!-- Why Stories Matter -->
-    <section id="stories" class="section">
-      <h2 class="section-title">Why Stories Matter</h2>
-
-      <div class="grid-2">
-        <div class="panel">
-          <p class="lead">
-            Stories save lives. When someone shares what they’ve lived through, it becomes a light for someone still walking in the dark.
-          </p>
-          <p>
-            Relax Bro is a place where people can be honest — no fake polish — and still be respected. Your story matters.
-          </p>
-        </div>
-
-        <div class="panel">
-          <h3 class="panel-title">What you’ll find here</h3>
-          <ul class="bullets">
+      <div class="cards">
+        <div class="card">
+          <h3>What you’ll find here</h3>
+          <ul>
             <li>Real conversations — no fake polish</li>
             <li>Testimonies with humor and honesty</li>
             <li>A safe space for growth and healing</li>
-            <li>People who’ve been through it — and kept going</li>
           </ul>
+        </div>
+
+        <div class="card">
+          <h3>Why this exists</h3>
+          <p>
+            The world has enough noise. This is a place to slow down, listen, and remember:
+            <strong>your story matters.</strong>
+          </p>
+          <p class="muted">
+            If you’ve been through it — you’re not alone. If you’re going through it — you’ll make it.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Get Involved -->
+    <!-- PODCAST -->
+    <section id="podcast" class="section">
+      <div class="section-head">
+        <h2>Podcast</h2>
+        <p class="muted">Newest episode / featured video</p>
+      </div>
+
+      <div class="embed-shell">
+        <!-- YouTube embed: replace VIDEO_ID if you want a different one -->
+        <div class="ratio">
+          <iframe
+            src="https://www.youtube.com/embed/ejJOKwIbO5c"
+            title="Relax Bro Podcast on YouTube"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="embed-actions">
+          <a class="btn btn-red" href="https://youtu.be/ejJOKwIbO5c" target="_blank" rel="noopener">Open on YouTube</a>
+          <a class="btn btn-green" href="https://open.spotify.com/" target="_blank" rel="noopener">Open Spotify</a>
+          <a class="btn btn-ghost" href="#links">All links</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
     <section id="involved" class="section">
-      <h2 class="section-title">Get Involved</h2>
+      <div class="section-head">
+        <h2>Get Involved</h2>
+        <p class="muted">Want to support or be part of the show?</p>
+      </div>
 
       <div class="cards">
-        <div class="card anod anod-blue">
+        <div class="card">
           <h3>Be a Guest</h3>
-          <p>Got a testimony? Your story could help someone survive.</p>
-          <a class="mini" href="mailto:relaxbropodcast@gmail.com">Email the show</a>
+          <p class="muted">Got a testimony? Your story could help someone survive.</p>
+          <a class="link" href="mailto:relaxbropodcast@gmail.com">Email the show</a>
         </div>
 
-        <div class="card anod anod-purple">
+        <div class="card">
           <h3>Share the Podcast</h3>
-          <p>Send an episode to someone who needs hope.</p>
-          <button class="mini" id="copyLinkBtn" type="button">Copy site link</button>
+          <p class="muted">Send an episode to someone who needs hope.</p>
+          <button class="link-btn" id="copyLinkBtn" type="button">Copy site link</button>
+          <span class="copy-status" id="copyStatus" aria-live="polite"></span>
         </div>
 
-        <div class="card anod anod-red">
+        <div class="card">
           <h3>Community</h3>
-          <p>We’re building something real. Join the conversation.</p>
-          <a class="mini" href="YOUR_INSTAGRAM_LINK_HERE" target="_blank" rel="noreferrer">Instagram</a>
+          <p class="muted">We’re building something real. Join the conversation.</p>
+          <a class="link" href="https://www.instagram.com/relaxbropodcast/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div>© <span id="year"></span> Eric Vono • Built with grit, honesty, and hope</div>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Relax Bro Podcast</span>
+        <span class="muted">Built on steel, powered by stories.</span>
+      </div>
     </footer>
   </main>
 
