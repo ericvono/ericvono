@@ -1,29 +1,14 @@
-const cards = document.querySelectorAll(
-  ".link-card, .glass-card, .guest-card"
-);
+const buttons = document.querySelectorAll(".btn");
 
-const observer = new IntersectionObserver(
+buttons.forEach((button) => {
+  button.addEventListener("mousemove", (e) => {
+    const rect = button.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-  entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add("show");
-
-      }
-
-    });
-
-  },
-
-  {
-    threshold: 0.15
-  }
-
-);
-
-cards.forEach(card => {
-  observer.observe(card);
+    button.style.setProperty("--x", `${x}px`);
+    button.style.setProperty("--y", `${y}px`);
+  });
 });
+
+console.log("Relax Bro Podcast site loaded.");
