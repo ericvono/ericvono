@@ -1,17 +1,29 @@
-// year
-document.getElementById("year").textContent = new Date().getFullYear();
+const cards = document.querySelectorAll(
+  ".link-card, .glass-card, .guest-card"
+);
 
-// copy link
-const btn = document.getElementById("copyLinkBtn");
-const statusEl = document.getElementById("copyStatus");
+const observer = new IntersectionObserver(
 
-btn?.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(window.location.href);
-    statusEl.textContent = "Copied!";
-    setTimeout(() => (statusEl.textContent = ""), 1400);
-  } catch (e) {
-    statusEl.textContent = "Copy failed";
-    setTimeout(() => (statusEl.textContent = ""), 1400);
+  entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("show");
+
+      }
+
+    });
+
+  },
+
+  {
+    threshold: 0.15
   }
+
+);
+
+cards.forEach(card => {
+  observer.observe(card);
 });
