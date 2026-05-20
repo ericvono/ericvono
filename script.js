@@ -1,14 +1,9 @@
-const buttons = document.querySelectorAll(".btn");
+const header = document.querySelector(".site-header");
 
-buttons.forEach((button) => {
-  button.addEventListener("mousemove", (e) => {
-    const rect = button.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    button.style.setProperty("--x", `${x}px`);
-    button.style.setProperty("--y", `${y}px`);
-  });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    header.style.background = "rgba(5, 3, 10, 0.82)";
+  } else {
+    header.style.background = "rgba(5, 3, 10, 0.45)";
+  }
 });
-
-console.log("Relax Bro Podcast site loaded.");
