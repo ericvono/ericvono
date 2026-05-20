@@ -1,6 +1,9 @@
-const bg = document.querySelector(".bg-image");
+const header = document.querySelector(".site-header");
 
 window.addEventListener("scroll", () => {
-  const y = window.scrollY * -0.04;
-  bg.style.transform = `scale(1.06) translateY(${y}px)`;
+  if (window.scrollY > 40) {
+    header.style.background = "rgba(0,0,0,0.82)";
+  } else {
+    header.style.background = "rgba(0,0,0,0.45)";
+  }
 });
